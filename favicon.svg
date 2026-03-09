@@ -1,8 +1,5 @@
 
 
-Favicon · SVG
-Copy
-
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <!-- Purple rounded rectangle envelope body -->
   <rect x="4" y="16" width="92" height="68" rx="13" ry="13" fill="#6B4EFF"/>
