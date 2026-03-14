@@ -443,8 +443,8 @@ function Generator({user,onNav}) {
     if(!topic.trim()){return;} if(!user){onNav("signup");return;}
     setLoading(true); setOutput("");
     try{
-      const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1000,messages:[{role:"user",content:
+      const r=await fetch("https://api.groq.com/openai/v1/chat/completions",{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({model:"openai/gpt-oss-120b",max_tokens:1000,messages:[{role:"user",content:
           `Write a ${tone.toLowerCase()} email about: "${topic}". Length: ${length==="Short"?"2-3 paragraphs":length==="Medium"?"3-4 paragraphs":"4-6 paragraphs"}. Start with "Subject: [line]" then blank line then email body. End with sign-off. Sound natural, human. No placeholder brackets.`
         }]})});
       const d=await r.json();
